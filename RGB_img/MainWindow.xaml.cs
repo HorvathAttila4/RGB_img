@@ -59,12 +59,13 @@ namespace RGB_img
                         Width = CellSize,
                         Height = CellSize,
                         Fill = new SolidColorBrush(
-                            Color.FromArgb(p.R, p.G, p.B))
+                            Color.FromRgb((byte)p.R, (byte)p.G, (byte)p.B))
+
 
                     };
 
-                    Canvas.SetLeft(rect, x * CellSize);
-                    Canvas.SetTop(rect, y * CellSize);
+                    Canvas.SetLeft(rect, y * CellSize);
+                    Canvas.SetTop(rect, x * CellSize);
 
                     MainCanvas.Children.Add(rect);
                 }
